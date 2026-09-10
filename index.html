@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>陳光耀 • 互動式個人簡歷</title>
+  <meta name="description" content="陳光耀（Chen Guangyao）— 佛教建築與工藝專案負責人，互動式繁體中文簡歷與成功案例畫廊。">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Fallback / 建議：若有魏碑字體檔可上傳並透過 @font-face 引入；此處以字體族宣告為主 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>陳光耀</h1>
+      <p class="subtitle">總經理 / 佛教寺院整體設計與定製工程</p>
+      <div class="contact-actions">
+        <button id="reveal-email" aria-expanded="false">顯示聯絡郵箱</button>
+        <a class="download" href="/assets/resume.pdf" download>下載履歷（PDF）</a>
+      </div>
+      <p id="email-placeholder" class="email-placeholder" hidden>guangyaochen@ln.hk</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>關於我</h2>
+      <p>創立並領導專注於佛教寺院與宗教文化建築領域的公司，提供整體設計、定製產品生產與現場交付等一條龍服務，專精於傳統工藝與現代製造整合。</p>
+    </section>
+
+    <section id="education">
+      <h2>教育經歷</h2>
+      <ul>
+        <li>MBA（2010.09 – 2013.01），華東師範大學，上海，中國</li>
+        <li>市場營銷／管理學學士（2001.09 – 2005.07），東華大學，上海，中國</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>工作經歷（精簡）</h2>
+      <ul>
+        <li>市場專員｜上海銀基信息科技有限公司（2005.09 – 2008.07） — 支援市場活動與投標文件製作。</li>
+        <li>市場執行主任｜魏德米勒電聯接（中國）有限公司（2008.08 – 2011.02） — 建立品牌與媒體策略。</li>
+        <li>銷售經理｜上海亦佳工藝品有限公司（2011.03 – 2015.08） — 對寺院與佛教市場之銷售與客戶管理。</li>
+        <li>總經理 / 創辦人｜上海永燈實業有限公司（2015.09 – 至今） — 領導公司提供寺院整體設計、定製化生產與交付。</li>
+      </ul>
+    </section>
+
+    <section id="cases">
+      <h2>成功案例</h2>
+      <div class="gallery" role="list">
+        <figure role="listitem">
+          <img data-src="/assets/images/case1.jpg" alt="大雄教寺萬佛殿" class="lazy" width="800" height="600">
+          <figcaption>大雄教寺萬佛殿</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img data-src="/assets/images/case2.jpg" alt="唐代多寶塔模型" class="lazy" width="800" height="600">
+          <figcaption>唐代多寶塔</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img data-src="/assets/images/case3.jpg" alt="葫蘆島天角山普渡寺" class="lazy" width="800" height="600">
+          <figcaption>葫蘆島天角山普渡寺</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img data-src="/assets/images/case4.jpg" alt="特製龍鎖" class="lazy" width="800" height="600">
+          <figcaption>特製龍鎖</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox container (injected by JS) -->
+  <script src="/script.js"></script>
+</body>
+</html>
