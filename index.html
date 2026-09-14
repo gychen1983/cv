@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="陳光耀的动态简历与文化视觉作品集">
+  <title>陳光耀 / Visual Archive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top"><span class="brand-seal">光</span><span>GUANGYAO<br><small>VISUAL ARCHIVE</small></span></a>
+      <div class="side-note"><span class="mono-label">PERSONAL INDEX / 2024</span><p>以影像、材料与空间，记录传统文化仍在发生的现场。</p></div>
+      <nav class="side-nav" aria-label="页面导航">
+        <a class="active" href="#top"><b>00</b>总览</a><a href="#projects"><b>01</b>项目档案</a><a href="#experience"><b>02</b>经历履历</a><a href="#about"><b>03</b>关于我</a>
+      </nav>
+      <div class="side-bottom"><span class="availability"><i></i> OPEN TO COLLABORATION</span><a href="mailto:hello@guangyao.studio">hello@guangyao.studio</a><a href="陳光耀3063285.pdf" download>下载 PDF 简历 ↘</a></div>
+    </aside>
+
+    <main id="top" class="main">
+      <header class="topbar"><div class="path">ARCHIVE <span>/</span> RESUME + WORKS</div><div class="top-actions"><span id="save-state">LOCAL DATA READY</span><button id="theme-toggle" class="icon-button" type="button" aria-label="切换主题">◐</button><button id="edit-button" class="edit-button" type="button">编辑资料 <span>✦</span></button></div></header>
+
+      <section class="hero">
+        <div class="hero-copy"><p class="overline">VISUAL RESEARCHER <span>BASED IN HONG KONG</span></p><h1 id="profile-name">陳光耀<br><em>finds meaning</em><br>in the details.</h1><p id="profile-bio" class="hero-description"></p><div class="hero-links"><a class="solid-link" href="#projects">进入项目档案 <span>↗</span></a><a class="under-link" href="mailto:hello@guangyao.studio">联系我</a></div></div>
+        <div class="hero-image-wrap"><div class="hero-image"><img src="实图3.png" alt="传统寺院空间中的金色佛像" loading="eager"><span class="image-index">FIG. 001 / FIELD NOTE</span><span class="image-caption">TEMPLE / LIGHT / MATERIAL</span></div><p class="hero-aside-note">观察不只是观看。<br><strong>它是与地方建立关系的开始。</strong></p></div>
+      </section>
+
+      <section class="metrics" aria-label="个人数据"><div><strong id="metric-years">05</strong><span>年创作经验</span></div><div><strong id="metric-projects">08</strong><span>完成档案项目</span></div><div><strong id="metric-fields">03</strong><span>研究方向</span></div><div class="metric-date"><span>LAST UPDATED</span><strong id="last-updated">2024.09.14</strong></div></section>
+
+      <section id="projects" class="content-section"><div class="section-heading"><div><span class="section-code">01 / SELECTED ARCHIVES</span><h2>项目档案</h2></div><div class="filters" role="group" aria-label="项目筛选"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="space">空间</button><button class="filter" data-filter="object">器物</button><button class="filter" data-filter="detail">细节</button></div></div><div id="project-list" class="project-grid"></div></section>
+
+      <section id="experience" class="content-section"><div class="section-heading"><div><span class="section-code">02 / EXPERIENCE</span><h2>经历履历</h2></div><p class="section-lead">在现场工作，在细节中思考。</p></div><div id="experience-list" class="experience-list"></div></section>
+
+      <section id="about" class="content-section about-section"><div class="section-heading"><div><span class="section-code">03 / ABOUT</span><h2>关于我</h2></div></div><div class="about-layout"><p id="about-text" class="about-quote"></p><div><span class="toolkit-label">TOOLKIT / FOCUS</span><div id="skills-list" class="skills-list"></div></div></div></section>
+      <footer class="footer"><span>© 2024 GUANGYAO</span><span>IMAGE / MEMORY / PLACE</span><a href="#top">RETURN TO INDEX ↑</a></footer>
+    </main>
+  </div>
+
+  <dialog id="editor-dialog"><form method="dialog" class="editor-form"><div class="dialog-header"><div><span class="section-code">CONTENT EDITOR</span><h2>更新简历内容</h2></div><button class="close-button" value="cancel" aria-label="关闭">×</button></div><p class="dialog-help">修改下方 JSON 后保存。内容会立即渲染，并保存到当前浏览器。</p><label for="data-editor">PROFILE DATA</label><textarea id="data-editor" spellcheck="false"></textarea><div class="dialog-actions"><button class="cancel-button" value="cancel">取消</button><button id="save-data" class="save-button" value="default">保存更新 ↗</button></div></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
