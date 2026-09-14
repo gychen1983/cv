@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
     lazyImages.forEach(img => { const src=img.getAttribute('data-src'); if(src) img.src=src; });
   }
 
-  // Reveal email button
+  // 顯示 / 隱藏 郵箱 按鈕
   const revealBtn = document.getElementById('reveal-email');
   const emailPlaceholder = document.getElementById('email-placeholder');
   if(revealBtn && emailPlaceholder){
@@ -32,20 +32,24 @@ document.addEventListener('DOMContentLoaded', function(){
       if(isHidden){
         emailPlaceholder.hidden = false;
         revealBtn.setAttribute('aria-expanded','true');
+        // 按鈕文字改為「隱藏聯絡郵箱」以符合介面語言
+        revealBtn.innerText = '隱藏聯絡郵箱';
       } else {
         emailPlaceholder.hidden = true;
         revealBtn.setAttribute('aria-expanded','false');
+        revealBtn.innerText = '顯示聯絡郵箱';
       }
     });
   }
 
-  // Basic Lightbox
+  // 基本圖片燈箱（Lightbox）
   const figures = Array.from(document.querySelectorAll('.gallery figure'));
   let currentIndex = -1;
   function openLightbox(index){
     currentIndex = index;
-    const imgSrc = figures[index].querySelector('img').getAttribute('src') || figures[index].querySelector('img').getAttribute('data-src');
-    const alt = figures[index].querySelector('img').getAttribute('alt') || '';
+    const imgEl = figures[index].querySelector('img');
+    const imgSrc = imgEl.getAttribute('src') || imgEl.getAttribute('data-src');
+    const alt = imgEl.getAttribute('alt') || '';
 
     const overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
@@ -60,13 +64,17 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const closeBtn = document.createElement('button');
     closeBtn.className = 'lightbox-close';
-    closeBtn.innerText = '×';
+    // 使用中文標籤，並保留符號以利辨識
+    closeBtn.innerText = '× 關閉';
+    closeBtn.setAttribute('aria-label','關閉燈箱');
     closeBtn.addEventListener('click', closeLightbox);
 
     const nav = document.createElement('div');
     nav.className = 'lightbox-nav';
-    const prevBtn = document.createElement('button'); prevBtn.innerText='‹';
-    const nextBtn = document.createElement('button'); nextBtn.innerText='›';
+    const prevBtn = document.createElement('button'); prevBtn.innerText='上一張';
+    const nextBtn = document.createElement('button'); nextBtn.innerText='下一張';
+    prevBtn.setAttribute('aria-label','上一張圖片');
+    nextBtn.setAttribute('aria-label','下一張圖片');
     prevBtn.addEventListener('click', ()=> navigate(-1));
     nextBtn.addEventListener('click', ()=> navigate(1));
     nav.appendChild(prevBtn); nav.appendChild(nextBtn);
@@ -91,9 +99,10 @@ document.addEventListener('DOMContentLoaded', function(){
     function navigate(dir){
       const next = (currentIndex + dir + figures.length) % figures.length;
       currentIndex = next;
-      const nextImg = figures[currentIndex].querySelector('img').getAttribute('src') || figures[currentIndex].querySelector('img').getAttribute('data-src');
+      const nextImgEl = figures[currentIndex].querySelector('img');
+      const nextImg = nextImgEl.getAttribute('src') || nextImgEl.getAttribute('data-src');
       image.src = nextImg;
-      image.alt = figures[currentIndex].querySelector('img').getAttribute('alt') || '';
+      image.alt = nextImgEl.getAttribute('alt') || '';
     }
 
     function closeLightbox(){
