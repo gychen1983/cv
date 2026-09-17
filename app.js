@@ -1,10 +1,10 @@
 const defaultData = {
-  profile: { name: '陳光耀', bio: '我是一名视觉研究者与影像创作者，关注传统文化、空间记忆与物质细节，尝试用当代视觉语言保存那些正在发生的故事。', years: '05', projects: '08', fields: '03', updated: '2024.09.14', about: '我相信每一件器物、每一个空间，都有一段值得被重新观看的时间。我的工作从现场出发，在光线、材料和人的使用痕迹之间，寻找文化继续生长的证据。' },
+  profile: { name: '陳光耀', bio: '我是一名专业的佛教艺术从业者，热爱传统佛教文化、欣赏空间记忆与物质细节的呈现，将尝试用当代视觉语言保存那些正在发生的故事。', years: '05', projects: '08', fields: '03', updated: '2024.09.14', about: '我相信每一件器物、每一个空间，都有一段值得被重新观看的时间。我的工作从历史出发，在现场深思，在光线、材料和人的使用痕迹之间，寻找佛教艺术文化继续生长的证据。' },
   projects: [
-    { title: '光的秩序 / Temple Field Notes', type: 'space', tag: 'SPACE / PHOTO ESSAY', year: '2024', description: '记录寺院建筑中的天花、光线与动线，研究仪式空间如何通过视觉秩序建立情绪。', image: '实图1.png' },
-    { title: '金色信物 / Object Study', type: 'object', tag: 'OBJECT / MATERIAL', year: '2024', description: '以近距离影像观察佛具的尺度、反光与工艺纹样，让材料成为叙述本身。', image: '实图2.png' },
-    { title: '千手之间 / Sacred Center', type: 'space', tag: 'SPACE / DOCUMENTARY', year: '2023', description: '从正面视角建立人与造像之间的观看关系，关注空间中心如何聚合注意力。', image: '实图3.png' },
-    { title: '纹样档案 / Living Detail', type: 'detail', tag: 'DETAIL / VISUAL ARCHIVE', year: '2023', description: '采集传统装饰中的瑞兽、云纹与金属肌理，建立可以持续扩展的视觉档案。', image: '实图4.png' }
+    { title: '光的秩序 / Temple Field Notes', type: 'space', tag: 'SPACE / PHOTO ESSAY', year: '2016', description: '记录寺院万佛宝殿的天花、光线与动线，研究仪式空间如何通过视觉秩序建立情绪。', image: '实图1.png' },
+    { title: '金色宝塔 / Golden Pagoda', type: 'object', tag: 'OBJECT / MATERIAL', year: '2015', description: '以近距离影像观察佛具的尺度、反光与工艺纹样，让材料成为叙述本身。', image: '实图2.png' },
+    { title: '千手之间 / Sacred Center', type: 'space', tag: 'SPACE / DOCUMENTARY', year: '2025', description: '从正面视角建立人与造像之间的观看关系，关注空间中心如何聚合注意力。', image: '实图3.png' },
+    { title: '妙手精工 / Living Detail', type: 'detail', tag: 'DETAIL / VISUAL ARCHIVE', year: '2023', description: '采集传统装饰中的瑞兽、云纹与金属肌理，建立可以持续扩展的视觉档案。', image: '实图4.png' }
   ],
   experience: [
     { date: '2022 — NOW', company: 'Independent Visual Practice', role: 'VISUAL RESEARCHER / PHOTOGRAPHER', place: 'HONG KONG' },
